@@ -17,6 +17,11 @@ function App() {
 
   return (
     <div className="app">
+      <header>
+        <h1>Eisenhower Matrix App</h1>
+        {/* Additional app-level functions can go here, e.g., login */}
+      </header>
+      <main>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -90,6 +95,10 @@ function App() {
           </ul>
         </div>
       </div>
+        </main>
+      <footer>
+        {/* Footer content, if any */}
+      </footer>
     </div>
   );
 }
