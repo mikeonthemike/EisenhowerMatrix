@@ -4,6 +4,22 @@ main {
   line-height: 100vh
 }
 
+h1 {
+  font-family: "raleways";
+}
+
+h2 {
+  font-family: "raleways";
+}
+
+h3 {
+  font-family: "raleways";
+}
+
+p {
+  font-family: "lato";
+}
+
 /* DivTable.com */
 .divTable{
 	display: table;
@@ -33,4 +49,58 @@ main {
 }
 .divTableBody {
 	display: table-row-group;
+}
+
+.matrix {
+  display: grid;
+/*  grid-template: 1fr 1fr / 1fr 1fr; */
+/*  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat (2, 1fr); */
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+  grid-gap: 10px;
+}
+
+.matrix-quadrant {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;  /* two columns */
+  grid-template-rows: 50px 1fr; /* two rows  */
+}
+
+#important-urgent       { grid-column: 1; grid-row: 1; };
+#important-noturgent    { grid-column: 1; grid-row: 1; };
+#notimportant-urgent    { grid-column: 1; grid-row: 1; };
+#notimportant-noturgent { grid-column: 1; grid-row: 1; };
+
+.matrix-quadrant h3 {
+  margin-top: 0;
+  font-family: "raleways";
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+
+/* table formatting */
+table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+th, td {
+  background-color: #96D4D4;
 }

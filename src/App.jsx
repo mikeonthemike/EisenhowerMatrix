@@ -16,7 +16,7 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="app" align="center">
       <header>
         <h1>Eisenhower Matrix App</h1>
         {/* Additional app-level functions can go here, e.g., login */}
@@ -53,8 +53,58 @@ function App() {
         </div>
         <button type="submit">Add task</button>
       </form>
-      <div className="matrix">
-        <div className="quadrant important-urgent">
+        &nbsp;
+        &nbsp;
+        &nbsp;
+    
+<table>
+<tr>
+  <td>      <h3>Important & Not Urgent</h3>
+          <ul>
+            {tasks
+              .filter((task) => task.importance >= 5 && task.urgency < 5)
+              .map((task, index) => (
+                <li key={index}>{task.task}</li>
+              ))}
+          </ul>
+   </td>
+  <td>
+    <h3>Important & Urgent</h3>
+          <ul>
+            {tasks
+              .filter((task) => task.importance >= 5 && task.urgency >= 5)
+              .map((task, index) => (
+                <li key={index}>{task.task}</li>
+              ))}
+          </ul>
+    </td>
+</tr>
+  <tr>
+  <td>          <h3>Not Important & Not Urgent</h3>
+          <ul>
+            {tasks
+              .filter((task) => task.importance < 5 && task.urgency < 5)
+              .map((task, index) => (
+                <li key={index}>{task.task}</li>
+              ))}
+          </ul></td>
+    <td>       <h3>Not Important & Urgent</h3>
+          <ul>
+            {tasks
+              .filter((task) => task.importance < 5 && task.urgency >= 5)
+              .map((task, index) => (
+                <li key={index}>{task.task}</li>
+              ))}
+          </ul>
+</td>
+  </tr>
+</table>
+        
+        &nbsp;
+        &nbsp;
+        &nbsp;
+    <div class="matrix">
+        <div class="matrix-quadrant">
           <h3>Important & Urgent</h3>
           <ul>
             {tasks
@@ -64,7 +114,7 @@ function App() {
               ))}
           </ul>
         </div>
-        <div className="quadrant important-not-urgent">
+        <div class="matrix-quadrant">
           <h3>Important & Not Urgent</h3>
           <ul>
             {tasks
@@ -74,7 +124,7 @@ function App() {
               ))}
           </ul>
         </div>
-        <div className="quadrant not-important-urgent">
+        <div class="matrix-quadrant">
           <h3>Not Important & Urgent</h3>
           <ul>
             {tasks
@@ -84,7 +134,7 @@ function App() {
               ))}
           </ul>
         </div>
-        <div className="quadrant not-important-not-urgent">
+        <div class="matrix-quadrant">
           <h3>Not Important & Not Urgent</h3>
           <ul>
             {tasks
