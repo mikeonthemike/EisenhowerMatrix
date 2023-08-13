@@ -56,8 +56,8 @@ function App() {
         &nbsp;
         &nbsp;
         &nbsp;
-    
-<table>
+        {/*   
+ <table>
 <tr>
   <td>      <h3>Important & Not Urgent</h3>
           <ul>
@@ -99,21 +99,9 @@ function App() {
 </td>
   </tr>
 </table>
-        
-        &nbsp;
-        &nbsp;
-        &nbsp;
-    <div class="matrix">
-        <div class="matrix-quadrant">
-          <h3>Important & Urgent</h3>
-          <ul>
-            {tasks
-              .filter((task) => task.importance >= 5 && task.urgency >= 5)
-              .map((task, index) => (
-                <li key={index}>{task.task}</li>
-              ))}
-          </ul>
-        </div>
+        */}
+
+        <div class="matrix">
         <div class="matrix-quadrant">
           <h3>Important & Not Urgent</h3>
           <ul>
@@ -125,10 +113,10 @@ function App() {
           </ul>
         </div>
         <div class="matrix-quadrant">
-          <h3>Not Important & Urgent</h3>
+          <h3>Important & Urgent</h3>
           <ul>
             {tasks
-              .filter((task) => task.importance < 5 && task.urgency >= 5)
+              .filter((task) => task.importance >= 5 && task.urgency >= 5)
               .map((task, index) => (
                 <li key={index}>{task.task}</li>
               ))}
@@ -139,6 +127,17 @@ function App() {
           <ul>
             {tasks
               .filter((task) => task.importance < 5 && task.urgency < 5)
+              .map((task, index) => (
+                <li key={index}>{task.task}</li>
+              ))}
+          </ul>
+        </div>
+
+        <div class="matrix-quadrant">
+          <h3>Not Important & Urgent</h3>
+          <ul>
+            {tasks
+              .filter((task) => task.importance < 5 && task.urgency >= 5)
               .map((task, index) => (
                 <li key={index}>{task.task}</li>
               ))}

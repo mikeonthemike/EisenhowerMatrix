@@ -1,8 +1,11 @@
 main {
   text-align: center;
   vertical-align: center;
-  line-height: 100vh
+/*  line-height: 100vh; */
+  align-items: center;
 }
+
+
 
 h1 {
   font-family: "raleways";
@@ -18,6 +21,14 @@ h3 {
 
 p {
   font-family: "lato";
+}
+
+/* Form styling */
+input[type=text] {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 /* DivTable.com */
@@ -52,7 +63,7 @@ p {
 }
 
 .matrix {
-  display: grid;
+  display: inline-grid;
 /*  grid-template: 1fr 1fr / 1fr 1fr; */
 /*  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat (2, 1fr); */
@@ -70,16 +81,18 @@ p {
   justify-content: center;
 }
 
+/*
 #grid {
   display: grid;
   grid-template-columns: 150px 1fr;  /* two columns */
-  grid-template-rows: 50px 1fr; /* two rows  */
-}
+/*  grid-template-rows: 50px 1fr; /* two rows  */
+/*}
 
 #important-urgent       { grid-column: 1; grid-row: 1; };
 #important-noturgent    { grid-column: 1; grid-row: 1; };
 #notimportant-urgent    { grid-column: 1; grid-row: 1; };
 #notimportant-noturgent { grid-column: 1; grid-row: 1; };
+*/
 
 .matrix-quadrant h3 {
   margin-top: 0;
