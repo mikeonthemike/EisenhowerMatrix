@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 main {
   text-align: center;
   vertical-align: center;
@@ -5,7 +10,7 @@ main {
   align-items: center;
 }
 
-
+/*
 
 h1 {
   font-family: "raleways";
@@ -24,14 +29,16 @@ p {
 }
 
 /* Form styling */
+/*
 input[type=text] {
   width: 80%;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
 }
-
+*/
 /* DivTable.com */
+/*
 .divTable{
 	display: table;
 	width: 100%;
@@ -64,10 +71,12 @@ input[type=text] {
 
 .matrix {
   display: inline-grid;
+*/
 /*  grid-template: 1fr 1fr / 1fr 1fr; */
 /*  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat (2, 1fr); */
-  grid-template-columns: 200px 200px;
+/*
+grid-template-columns: 200px 200px;
   grid-template-rows: 200px 200px;
   grid-gap: 10px;
 }
@@ -93,7 +102,7 @@ input[type=text] {
 #notimportant-urgent    { grid-column: 1; grid-row: 1; };
 #notimportant-noturgent { grid-column: 1; grid-row: 1; };
 */
-
+/*
 .matrix-quadrant h3 {
   margin-top: 0;
   font-family: "raleways";
@@ -108,8 +117,9 @@ li {
   margin-bottom: 5px;
 }
 
-
+*/
 /* table formatting */
+/*
 table, th, td {
   border: 1px solid white;
   border-collapse: collapse;
@@ -151,3 +161,4 @@ th, td {
 .task-edit input[type="range"] {
   width: 80%;
 }
+*/

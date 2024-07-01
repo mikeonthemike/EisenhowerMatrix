@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
-function TaskItem({ task, index, updateTask }) {
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedTask, setEditedTask] = useState(task);
+  function TaskItem({ task, index, updateTask, deleteTask }) {
+    const [isEditing, setIsEditing] = useState(false);
+    const [editedTask, setEditedTask] = useState(task);
 
-  const handleEdit = () => {
-    setIsEditing(true);
-  };
+    const handleEdit = () => {
+      setIsEditing(true);
+    };
 
-  const handleSave = () => {
-    updateTask(index, editedTask);
-    setIsEditing(false);
-  };
+    const handleSave = () => {
+      updateTask(index, editedTask);
+      setIsEditing(false);
+    };
+
+    const handleDelete = () => {
+      deleteTask(index);
+    };
+
 
   if (isEditing) {
     return (
@@ -49,12 +54,15 @@ function TaskItem({ task, index, updateTask }) {
     );
   }
 
-  return (
-    <div className="task-item">
-      {task.task}
-      <button onClick={handleEdit}>Edit</button>
-    </div>
-  );
+    return (
+      <div className="task-item">
+        {task.task}
+        <div>
+          <button onClick={handleEdit}>Edit</button>
+          <button onClick={handleDelete}>Delete</button>
+        </div>
+      </div>
+    );
 }
 
 function App() {
@@ -76,6 +84,10 @@ function App() {
     const newTasks = [...tasks];
     newTasks[index] = updatedTask;
     setTasks(newTasks);
+  };
+
+  const deleteTask = (taskIndex) => {
+    setTasks(tasks.filter((_, index) => index !== taskIndex));
   };
 
   const onDragEnd = (result) => {
@@ -159,7 +171,7 @@ function App() {
                                 {...provided.draggableProps}
                                 {...provided.dragHandleProps}
                               >
-                                <TaskItem task={task} index={index} updateTask={updateTask} />
+                                <TaskItem task={task} index={index} updateTask={updateTask} deleteTask={deleteTask} />
                               </li>
                             )}
                           </Draggable>
