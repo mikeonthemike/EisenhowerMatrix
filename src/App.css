@@ -117,3 +117,37 @@ table, th, td {
 th, td {
   background-color: #96D4D4;
 }
+
+
+
+.matrix {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.matrix-quadrant {
+  border: 1px solid #ccc;
+  padding: 10px;
+  min-height: 200px;
+}
+
+.task-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.task-edit {
+  margin-bottom: 10px;
+}
+
+.task-edit input[type="text"] {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.task-edit input[type="range"] {
+  width: 80%;
+}
