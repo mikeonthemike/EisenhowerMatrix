@@ -1,12 +1,10 @@
-## Running React on Repl.it
+## Eisenhower Matrix
 
-[React](https://reactjs.org/) is a popular JavaScript library for building user interfaces.
-
-[Vite](https://vitejs.dev/) is a blazing fast frontend build tool that includes features like Hot Module Reloading (HMR), optimized builds, and TypeScript support out of the box.
-
-Using the two in conjunction is one of the fastest ways to build a web app.
+This is a simple app that let's you create, edit and delete tasks in an Eisenhower matrix based on their importance and urgency. This helps with planning what to focus on.
 
 ### Getting Started
+- This was built on replit, so there's a whole bunch of replit config in it
+- fork it onto a replit
 - Hit run
 - Edit [App.jsx](#src/App.jsx) and watch it live update!
 
